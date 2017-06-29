@@ -1,0 +1,109 @@
+<html>
+<head>
+    <title><%= @document.title %> | My Website</title>
+	<title><%= if @document.title then "#{@document.title} | #{@site.title}" else @site.title %></title>
+	<title><%= @getPreparedTitle() %></title>
+	 <!-- Mobile viewport optimized: h5bp.com/viewport -->
+  <meta name="viewport" content="width=device-width"/>
+    <%- @getBlock("meta").toHTML() %>
+    <%- @getBlock("styles").toHTML() %>
+	<%- @getBlock("styles").add(["/styles/bootstrap.css"]).toHTML() %>
+	<%- @getBlock("styles").add(["/styles/carousel.css"]).toHTML() %>
+	<%- @getBlock("styles").add(["/styles/doc.css"]).toHTML() %>
+	<%- @getBlock("styles").add(["/styles/fonts/font-awesome.css"]).toHTML() %>
+	<%- @getBlock("styles").add(["/styles/set2.css"]).toHTML() %>
+	<%- @getBlock("styles").add(["/styles/style1.css"]).toHTML() %>
+	<%- @getBlock("styles").add(["https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"]).toHTML() %>
+	
+
+</head>
+<body>
+<header>
+	<div class="container">
+		<div class="logo"></div>
+		<div class="search"><i id="search" class="fa fa-search" aria-hidden="true"></i>
+		<div class="search_form">
+					<form>
+						<input type="text" placeholder="Search">
+						<input type="submit" value="Search">
+					</form>
+				</div></div>
+		
+		<!--Nav Start-->
+        <nav>
+           <a href="#" class="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></a>
+            <div id="mobile-menu">
+                <div class="menu-category"></div>
+            </div>
+			
+		  
+            <!--div class="nav">
+			
+			  <!--ul id="nab sf-menu clearfix">
+    <% for page in @getCollection("html").findAll({isPage:true}).toJSON(): %>
+        <li class="<%= if page.id is @document.id then 'active' else 'inactive' %>">
+            <a href="<%= page.url %>">
+                <%= page.title %>
+            </a>
+        </li>
+    <% end %>
+</ul-->
+            
+				
+          </div-->
+		  
+		  
+		              <div class="nav">
+               <ul class="nab sf-menu clearfix">
+					<li><a href="index.html" class="active">Home</a></li>
+					<li><a href="javascript:void(0)">new patients</a>
+						<ul>
+							<li><a href="service.html">Our Services</a></li>
+							<li><a href="team.html">Our Doctors</a></li>
+						</ul>
+					</li>
+					<li><a href="about_us.html">About Us</a></li>
+					<li><a href="testemonial.html">testimonials</a></li>
+					<li><a href="blog.html">Blog</a></li>
+					<li><a href="contact-us.html">Contact Us</a></li>
+					<li><a href="pet-selector.html">Pet Selector</a></li>
+					
+                </ul>
+				
+          </div>
+		  
+        </nav>
+        <!--Nav End-->
+	</div>
+	
+</header>
+		
+		
+
+
+
+  <!--h1><%= @document.title %></h1-->
+  <%- @content %>
+  <%- @getBlock("scripts").toHTML() %>
+  
+<%- @getBlock("scripts").add(["/scripts/jquery.js"]).toHTML() %>
+<%- @getBlock("scripts").add(["/scripts/bootstrap.js"]).toHTML() %>
+<%- @getBlock("scripts").add(["/scripts/dcjqaccordion.js"]).toHTML() %>
+<%- @getBlock("scripts").add(["/scripts/main.js"]).toHTML() %>
+<%- @getBlock("scripts").add(["/scripts/owlcarousel.js"]).toHTML() %>
+<%- @getBlock("scripts").add(["/scripts/filterizr.js"]).toHTML() %>
+<%- @getBlock("scripts").add(["/scripts/controls.js"]).toHTML() %>
+<%- @getBlock("scripts").add(["/scripts/owlcust.js"]).toHTML() %>
+<%- @getBlock("scripts").add(["/scripts/carousel.js"]).toHTML() %>
+<%- @getBlock("scripts").add(["/scripts/classie.js"]).toHTML() %>		
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBXtEityk-n68YWFy-ImXYw7obLsrEAm8&callback=initMap" type="text/javascript"></script>		
+<%- @getBlock("scripts").add(["/scripts/easymap.js"]).toHTML() %>
+<%- @getBlock("scripts").add(["/scripts/script.js"]).toHTML() %>		
+</body>
+
+
+<f<footer>
+	<div class="container">© 2013-2017 Veterinary Hospital. All rights reserved. </div>
+</footer>
+
+</html>
