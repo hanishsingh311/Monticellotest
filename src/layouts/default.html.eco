@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width"/>
     <%- @getBlock("meta").toHTML() %>
     <%- @getBlock("styles").toHTML() %>
-	<%- @getBlock("styles").add(["/styles/bootstrap.css"]).toHTML() %>
+	<%- @getBlock("styles").add(["https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"]).toHTML() %>
 	<%- @getBlock("styles").add(["/styles/carousel.css"]).toHTML() %>
 	<%- @getBlock("styles").add(["/styles/doc.css"]).toHTML() %>
 	<%- @getBlock("styles").add(["/styles/fonts/font-awesome.css"]).toHTML() %>
